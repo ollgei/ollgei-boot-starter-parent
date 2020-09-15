@@ -9,6 +9,7 @@
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
 
     <groupId>com.github.ollgei.spring</groupId>
     <artifactId>ollgei-boot-starter-parent</artifactId>
