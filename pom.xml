@@ -87,8 +87,11 @@
         <shedlock.version>4.14.0</shedlock.version>
         <ecwid-consul.version>1.4.5</ecwid-consul.version>
 
+
+        <privacy-snapshot.id>${privacy-release.id}</privacy-snapshot.id>
+        <privacy-snapshot.url>${privacy-release.url}</privacy-snapshot.url>
+        <privacy-release.id>privacy-releases</privacy-release.id>
         <privacy-release.url>http://localhost/</privacy-release.url>
-        <privacy-snapshot.url>http://localhost/</privacy-snapshot.url>
     </properties>
 
     <dependencyManagement>
@@ -303,14 +306,14 @@
             <id>release</id>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>privacy-releases</id>
+                    <id>${privacy-snapshot.id}</id>
                     <name>Privacy Nexus Snapshots</name>
                     <url>${privacy-snapshot.url}</url>
                 </snapshotRepository>
                 <repository>
-                    <id>privacy-releases</id>
+                    <id>${privacy-release.id}</id>
                     <name>Privacy Nexus Repository</name>
-                    <url>${privacy-snapshot.url}</url>
+                    <url>${privacy-release.url}</url>
                 </repository>
             </distributionManagement>
         </profile>
