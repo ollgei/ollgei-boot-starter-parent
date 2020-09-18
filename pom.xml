@@ -88,8 +88,8 @@
         <ecwid-consul.version>1.4.5</ecwid-consul.version>
 
 
-        <privacy-snapshot.id>${privacy-release.id}</privacy-snapshot.id>
-        <privacy-snapshot.url>${privacy-release.url}</privacy-snapshot.url>
+        <privacy-snapshot.id>privacy-snapshots</privacy-snapshot.id>
+        <privacy-snapshot.url>http://localhost/</privacy-snapshot.url>
         <privacy-release.id>privacy-releases</privacy-release.id>
         <privacy-release.url>http://localhost/</privacy-release.url>
     </properties>
