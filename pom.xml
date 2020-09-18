@@ -86,6 +86,9 @@
         <modelmapper.version>2.3.8</modelmapper.version>
         <shedlock.version>4.14.0</shedlock.version>
         <ecwid-consul.version>1.4.5</ecwid-consul.version>
+
+        <privacy-release.url>http://localhost/</privacy-release.url>
+        <privacy-snapshot.url>http://localhost/</privacy-snapshot.url>
     </properties>
 
     <dependencyManagement>
@@ -297,7 +300,22 @@
 
     <profiles>
         <profile>
-            <id>release-parent</id>
+            <id>release</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>privacy-releases</id>
+                    <name>Privacy Nexus Snapshots</name>
+                    <url>${privacy-snapshot.url}</url>
+                </snapshotRepository>
+                <repository>
+                    <id>privacy-releases</id>
+                    <name>Privacy Nexus Repository</name>
+                    <url>${privacy-snapshot.url}</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>release-nexus</id>
             <build>
                 <plugins>
                     <!-- Javadoc -->
