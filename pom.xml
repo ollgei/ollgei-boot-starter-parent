@@ -13,7 +13,7 @@
 
     <groupId>com.github.ollgei.spring</groupId>
     <artifactId>ollgei-boot-starter-parent</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <inceptionYear>2020</inceptionYear>
 
     <licenses>
@@ -74,7 +74,7 @@
         <rxjava.version>1.3.8</rxjava.version>
         <rxjava2.version>2.2.19</rxjava2.version>
         <rxjava3.version>3.0.6</rxjava3.version>
-        <ollgei.version>1.0.14</ollgei.version>
+        <ollgei.version>1.0.15</ollgei.version>
         <hutool.version>5.4.2</hutool.version>
         <disruptor.version>3.4.2</disruptor.version>
         <disruptor-starter.version>1.0.11</disruptor-starter.version>
@@ -356,25 +356,6 @@
         </profile>
         <profile>
             <id>release-zhongrui</id>
-            <build>
-                <plugins>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-source</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
             <distributionManagement>
                 <snapshotRepository>
                     <id>rdc-releases</id>
@@ -390,25 +371,6 @@
         </profile>
         <profile>
             <id>release</id>
-            <build>
-                <plugins>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-source</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
             <distributionManagement>
                 <snapshotRepository>
                     <id>${privacy-snapshot.id}</id>
@@ -463,21 +425,6 @@
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-source</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
                                 </goals>
                             </execution>
                         </executions>
