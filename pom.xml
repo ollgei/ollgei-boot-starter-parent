@@ -13,7 +13,7 @@
 
     <groupId>com.github.ollgei.spring</groupId>
     <artifactId>ollgei-boot-starter-parent</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <inceptionYear>2020</inceptionYear>
 
     <licenses>
@@ -76,7 +76,7 @@
         <rxjava2.version>2.2.19</rxjava2.version>
         <rxjava3.version>3.0.6</rxjava3.version>
         <ollgei.version>1.1.0</ollgei.version>
-        <hutool.version>5.4.2</hutool.version>
+        <hutool.version>5.4.3</hutool.version>
         <disruptor.version>3.4.2</disruptor.version>
         <disruptor-starter.version>1.0.11</disruptor-starter.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
@@ -93,7 +93,7 @@
         <swagger.version>1.5.24</swagger.version>
         <springfox2.version>2.10.5</springfox2.version>
         <springfox3.version>3.0.0</springfox3.version>
-        <springdoc.version>1.4.7</springdoc.version>
+        <springdoc.version>1.4.8</springdoc.version>
         <spring4all-swagger.version>1.9.1.RELEASE</spring4all-swagger.version>
         <vavr.version>0.10.3</vavr.version>
 
@@ -354,9 +354,19 @@
             <id>dev</id>
             <dependencies>
                 <dependency>
-                    <groupId>com.spring4all</groupId>
-                    <artifactId>swagger-spring-boot-starter</artifactId>
-                    <version>${spring4all-swagger.version}</version>
+                    <groupId>org.springdoc</groupId>
+                    <artifactId>springdoc-openapi-ui</artifactId>
+                    <version>${springdoc.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>dev-webflux</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springdoc</groupId>
+                    <artifactId>springdoc-openapi-webflux-ui</artifactId>
+                    <version>${springdoc.version}</version>
                 </dependency>
             </dependencies>
         </profile>
