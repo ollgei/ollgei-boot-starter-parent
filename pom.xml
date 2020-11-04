@@ -99,11 +99,14 @@
         <spring4all-swagger.version>1.9.1.RELEASE</spring4all-swagger.version>
         <vavr.version>0.10.3</vavr.version>
         <feign.version>11.0</feign.version>
+        <feign-form.version>3.8.0</feign-form.version>
         <hystrix.version>1.5.18</hystrix.version>
         <archaius.version>0.7.7</archaius.version>
         <myexcel.version>3.9.7</myexcel.version>
-        <bcprov-jdk15.version>1.66</bcprov-jdk15.version>
+        <bcprov-ext-jdk15on.version>1.66</bcprov-ext-jdk15on.version>
+        <bcprov-jdk15.version>1.67</bcprov-jdk15.version>
         <mybatisplus-encrypt-plugin.version>1.0.0</mybatisplus-encrypt-plugin.version>
+        <cglib.version>3.3.0</cglib.version>
 
         <privacy-snapshot.id>privacy-snapshots</privacy-snapshot.id>
         <privacy-snapshot.url>http://localhost/</privacy-snapshot.url>
@@ -113,6 +116,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+                <optional>true</optional>
+            </dependency>
             <dependency>
                 <groupId>com.github.ollgei.plugin</groupId>
                 <artifactId>mybatisplus-encrypt-plugin</artifactId>
@@ -126,7 +135,7 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-ext-jdk15on</artifactId>
-                <version>${bcprov-jdk15.version}</version>
+                <version>${bcprov-ext-jdk15on.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.bouncycastle</groupId>
@@ -149,9 +158,14 @@
                 <version>${feign.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.github.openfeign</groupId>
+                <groupId>io.github.openfeign.form</groupId>
                 <artifactId>feign-form</artifactId>
-                <version>${feign.version}</version>
+                <version>${feign-form.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form-spring</artifactId>
+                <version>${feign-form.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.openfeign</groupId>
