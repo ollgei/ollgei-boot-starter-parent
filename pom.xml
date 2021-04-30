@@ -103,7 +103,7 @@
         <hystrix.version>1.5.18</hystrix.version>
         <archaius.version>0.7.7</archaius.version>
         <myexcel.version>3.9.7</myexcel.version>
-        <bcprov-ext-jdk15on.version>1.66</bcprov-ext-jdk15on.version>
+        <bcprov-ext-jdk15on.version>1.67</bcprov-ext-jdk15on.version>
         <bcprov-jdk15.version>1.67</bcprov-jdk15.version>
         <mybatisplus-encrypt-plugin.version>1.0.0</mybatisplus-encrypt-plugin.version>
         <cglib.version>3.3.0</cglib.version>
